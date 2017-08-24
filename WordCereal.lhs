@@ -1,4 +1,4 @@
-WordSalad: An English passphrase word list
+WordCereal: An English passphrase word list
 
 
 Introduction
