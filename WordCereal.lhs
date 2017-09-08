@@ -184,7 +184,17 @@ and provide only nominal additional entropy.
 
 > data PartOfSpeech
 >   = Noun | Verb | Adj | Adv | Prep | Det | Conj
->   deriving (Eq, Ord, Show)
+>   deriving (Eq, Ord)
+> 
+> instance Show PartOfSpeech where
+>   show x = case x of
+>     Noun -> "N"
+>     Verb -> "V"
+>     Adj  -> "J"
+>     Adv  -> "A"
+>     Prep -> "P"
+>     Det  -> "D"
+>     Conj -> "C"
 > 
 > instance Entropizable PartOfSpeech where
 >   entropy x = case x of
@@ -247,6 +257,20 @@ least) a given entropy.
 >   let (x:xs) = dropWhile (\s -> entropy s < k) sentences
 >   let ys = takeWhile (\s -> entropy s == entropy x) (x:xs)
 >   runRVar (choice ys) DevRandom
+
+And for fun, ``writeSentences`` writes all of our sentence structures to a file.
+
+> encodeSentence :: [PartOfSpeech] -> String
+> encodeSentence ps = concat
+>   [ show $ entropy ps
+>   , ","
+>   , concatMap show ps
+>   ]
+> 
+> writeSentences :: FilePath -> IO ()
+> writeSentences path = do
+>   let xs = sentences
+>   appendFile path $ unlines $ map encodeSentence xs
 
 
 Words

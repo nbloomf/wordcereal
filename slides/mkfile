@@ -1,0 +1,7 @@
+MKSHELL=/bin/bash
+
+slides:VQ:
+  xelatex gm-2017.tex
+  xelatex gm-2017.tex
+  rm gm-2017.aux gm-2017.log gm-2017.nav
+  rm gm-2017.out gm-2017.snm gm-2017.toc
