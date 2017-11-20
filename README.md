@@ -7,6 +7,8 @@ A word list for building grammatical passphrases.
 * ``wordcereal.txt``: The word list.
 * ``WordCereal.lhs``: A literate Haskell program which validates the word list and encodes bits.
 
+Use ``stack test`` to validate.
+
 ## boring stuff
 
 The Merriweather typeface is copyright [Eben Sorkin](https://ebensorkin.wordpress.com/) and is included here under the Open Font License.

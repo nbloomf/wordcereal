@@ -13,3 +13,20 @@ executable wordcereal
     random-source,
     random-extras,
     random-fu
+
+test-suite wordcereal-test
+  type:
+    exitcode-stdio-1.0
+  main-is:
+    WordCereal.lhs
+  ghc-options:
+    -main-is Main.validateWordList
+  default-language:
+    Haskell2010
+  build-depends:
+    base == 4.*,
+    mtl,
+    QuickCheck >= 2.6,
+    random-source,
+    random-extras,
+    random-fu

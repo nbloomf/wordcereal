@@ -925,12 +925,15 @@ All Together
 >   validateHex                  dict
 >   validatePhoneticEditDistance dict
 >   validateEditDistance         dict
-
+> 
 > validatePath :: FilePath -> IO ()
 > validatePath path = do
 >   dict <- readWordListFile path
 >   try $ validate dict
 >   stats dict
+> 
+> validateWordList :: IO ()
+> validateWordList = validatePath "wordcereal.txt"
 
 To validate a properly formatted word list, just give its full path to
 ``validatePath``.
