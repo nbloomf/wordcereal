@@ -1985,7 +1985,7 @@ vrb-o	a7	stomp	/ˈstɔɱp/
 vrb-o	a8	unencode	/ˌʌn/ɪn/ˈkoʊd/
 vrb-o	a9	itemize	/ˈaɪ/tə/maɪz/
 vrb-o	aa	reinforce	/ˈɹiː/ɪn/ˌfoɹs/
-vrb-o	ab	coexist	/ˌkoʊ/ɪɡ/ˈzɪst/
+vrb-o	ab	coextend	/ˌkoʊ/ɪks/ˈtɪnd/
 vrb-o	ac	vandalize	/ˈvæn/dʌ/laɪz/
 vrb-o	ad	enable	/ɛn/ˈeɪ/bəl/
 vrb-o	ae	examine	/ˌɛɡ/ˈzæ/mɪn/
