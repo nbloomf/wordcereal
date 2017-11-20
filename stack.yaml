@@ -1,0 +1,11 @@
+resolver: lts-9.14
+
+packages:
+- .
+
+extra-deps:
+- random-extras-0.19
+
+flags: {}
+
+extra-package-dbs: []

@@ -82,7 +82,9 @@ bits. To this end we need to start with some boilerplate.
 
 > module Main where
 > 
-> import Data.List
+> import Prelude hiding (Word)
+> 
+> import Data.List hiding (sortOn)
 > import Data.Maybe
 > import Data.Random.RVar
 > import Data.Random.Extras
