@@ -994,14 +994,21 @@ and generates a passphrase with the given amount of entropy.
 Main
 ====
 
-We'll wrap our encode function in an extremely simple main that takes two
-command line arguments: the desired amount of entropy, and the (full) path of
-the word list.
+We'll wrap our encode function in an extremely simple main that takes as a 
+command line argument the desired amount of entropy.
 
 > main :: IO ()
 > main = do
->   [ent,path] <- getArgs
->   encodeWith path (read ent)
+>   args <- getArgs
+>   case args of
+>     [ent,path] -> encodeWith path (read ent)
+>     _ -> do
+>       putStrLn $ unlines
+>         [ "usage:"
+>         , "  wordcereal NUM PATH"
+>         , "where NUM is the amount of entropy required"
+>         , "and PATH is the path to the word list"
+>         ]
 
 And there you go. After compiling, call this program (``wordcereal``) with
 two arguments, the number of bits of entropy desired and the path of the word
